@@ -396,3 +396,24 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // منع التحويل لصفحة thank.html
+    let form = this;
+
+    // إرسال البيانات يدويًا باستخدام fetch
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+    }).then(response => {
+        if (response.ok) {
+            let alertBox = document.getElementById("alert-box");
+            alertBox.style.display = "block";
+
+            setTimeout(() => {
+                alertBox.style.display = "none";
+            }, 3000);
+
+            form.reset(); // يمسح الفورم بعد الإرسال
+        }
+    }).catch(error => console.error("Error:", error));
+});
