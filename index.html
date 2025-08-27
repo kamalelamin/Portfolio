@@ -465,39 +465,44 @@ Automate repetitive tasks using Excel and Macros.                    </p>
                 
                 <!-- Contact Form -->
     <form id="contact-form" action="https://formsubmit.co/Kamal.elamin05@gmail.com" method="POST" class="space-y-6">
-        
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="">
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <label for="name" class="block text-sm font-medium mb-2">Name *</label>
-            <input type="text" id="name" name="name" required
-              class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg">
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium mb-2">Email *</label>
-            <input type="email" id="email" name="email" required
-              class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg">
-          </div>
-        </div>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value=""> <!-- فضّيت الـ _next عشان ميتحولش -->
 
-        <div>
-          <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
-          <input type="text" id="subject" name="subject"
-            class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg">
-        </div>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label for="name" class="block text-sm font-medium mb-2">Name *</label>
+      <input type="text" id="name" name="name" required
+        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg">
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-medium mb-2">Email *</label>
+      <input type="email" id="email" name="email" required
+        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg">
+    </div>
+  </div>
 
-        <div>
-          <label for="message" class="block text-sm font-medium mb-2">Message *</label>
-          <textarea id="message" name="message" rows="6" required
-            class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg"></textarea>
-        </div>
+  <div>
+    <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+    <input type="text" id="subject" name="subject"
+      class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg">
+  </div>
 
-        <button type="submit" class="btn-primary w-full">
-          <i class="fas fa-paper-plane mr-2"></i> Send Message
-        </button>
-      </form>
+  <div>
+    <label for="message" class="block text-sm font-medium mb-2">Message *</label>
+    <textarea id="message" name="message" rows="6" required
+      class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg"></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary w-full">
+    <i class="fas fa-paper-plane mr-2"></i> Send Message
+  </button>
+</form>
+
+<!-- Alert box -->
+<div id="alert-box" style="display:none; margin-top:20px; padding:15px; background:#16a34a; color:white; font-weight:bold; border-radius:10px; text-align:center;">
+  ✅ Your message has been sent successfully!
+</div>
             </div>
         </div>
     </section>
