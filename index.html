@@ -464,7 +464,7 @@ Automate repetitive tasks using Excel and Macros.                    </p>
                 </div>
                 
                 <!-- Contact Form -->
-     <form action="https://formsubmit.co/Kamal.elamin05@gmail.com" method="POST" class="space-y-6">
+    <form action="https://formsubmit.co/Kamal.elamin05@gmail.com" method="POST" id="contact-form" class="space-y-6">
     <div class="grid md:grid-cols-2 gap-6">
         <div>
             <label for="name" class="block text-sm font-medium mb-2">Name *</label>
@@ -492,13 +492,18 @@ Automate repetitive tasks using Excel and Macros.                    </p>
 
     <!-- hidden inputs -->
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+    <input type="hidden" name="_next" value="">
 
     <button type="submit" class="btn-primary w-full">
         <i class="fas fa-paper-plane mr-2"></i>
         Send Message
     </button>
 </form>
+
+<!-- alert box -->
+<div id="alert-box" style="display:none; margin-top:20px; padding:15px; background:#16a34a; color:white; font-weight:bold; border-radius:10px; text-align:center;">
+    ✅ Your message has been sent successfully!
+</div>
             </div>
         </div>
     </section>
